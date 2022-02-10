@@ -9,11 +9,12 @@
 <body>
     <div class="title">Cyber Pet</div>
     <div class="pet_img"></div>
+    <div class="pet_box">
+        <div class="pet_name">""</div>
+        <input type="text" id="input" name="input">
+        <button id="start" onclick="start()">START</button>
+    </div>
     <div class="pet_container">
-        <div class="pet_box">
-            <div class="pet_name">""</div>
-            <input type="text" id="input" name="input">
-        </div>
         <div class="stats_container">
             <div class="stats" id="stats_title">Status</div>
             <div class="stats" id="hunger">Hunger</div>
@@ -26,12 +27,11 @@
             <div class="stats" id="energy_bar">☐☐☐☐☐☐☐☐☐☐</div>
         </div>
         <div class="button_container">
-            <button id="start">START</button>
-            <button id="feed">FEED</button>
-            <button id="drink">DRINK</button>
-            <button id="play">PLAY</button>
-            <button id="rest">REST</button>
-            <button id="reset">RESET</button>
+            <button id="feed" onclick="feed()">FEED</button>
+            <button id="drink" onclick="drink()">DRINK</button>
+            <button id="play" onclick="play()">PLAY</button>
+            <button id="rest" onclick="rest()">REST</button>
+            <button id="reset" onclick="reset()">RESET</button>
         </div>
     </div>
     <script src="/script.js"></script>

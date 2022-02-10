@@ -19,56 +19,39 @@ class Pet {
     get energy() {
         return this._energy;
     }
-    feed (){
+
+    feed(){
         this.hunger -40;
         this.thirst -10;
     }
-    drink (){
+    drink(){
         this.thirst -40;
         this.hunger -10;
     }
-    play (){
+    play(){
         this.energy -20;
         this.hunger -30;
-        this.thirst -35;
+        this.thirst -40;
     }
-    rest (){
+    rest(){
         this.energy +40;
         this.happiness -10;
         this.hunger +10;
     }
-
-    ignored (){
-        this.hunger +25;
-        this.thirst +25;
-        this.happiness -25;
-        this.energy -25;
+    ignored(){
+        this.hunger +20;
+        this.thirst +20;
+        this.happiness -20;
+        this.energy -20;
     }
 }
+let start = () => {
+
+}
+reset()
 
 const Animal = new Pet("Simba")
 
 console.log(Animal);
 
-
-setInterval(() => {ignored;}, 30000);
-
-const buttons = document.querySelector("button");
-
-function buttonClick() {
-    console.log(buttons)
-}
-
-function clickHandler(event) {
-    const buttons = event.target.closest("div");
-    console.log(buttons.dataset)
-  changeAudioTrack(buttons.dataset)
-}
-
-function bindHandlerTo(elements, handler) { 
-  elements.forEach(el => {
-    el.addEventListener("click", handler)
-  })
-}
-
-bindHandlerTo(buttons,clickHandler);
+setInterval(() => {Pet.apply(ignored())}, 30000);
