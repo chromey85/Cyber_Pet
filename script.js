@@ -50,7 +50,7 @@ class Pet {
 
 function start(){
     let animalName = document.getElementById("input").value;
-    let classHide = document.querySelectorAll('.pet_img', '.pet_container', '.stats_container', `.button_container`);
+    let classHide = document.querySelectorAll(['.pet_img', '.pet_container', '.stats_container', `.button_container`]);
     // document.addEventListener("click", (i) =>{
     //     console.log(i);
     //     classHide.style.display = "";
