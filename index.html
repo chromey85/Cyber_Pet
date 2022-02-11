@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="title">Cyber Pet</div>
-    <div class="pet_img"></div>
+    <img class="pet_img" src="/images/cat_kiss.gif">
     <div class="pet_box">
         <div class="pet_name">""</div>
         <input type="text" id="input" name="input">
@@ -27,13 +27,13 @@
             <div class="stats" id="energy_bar">☐☐☐☐☐☐☐☐☐☐</div>
         </div>
         <div class="button_container">
-            <button id="feed" onclick="feed()">FEED</button>
+            <button id="feed" onclick="Pet.feed()">FEED</button>
             <button id="drink" onclick="drink()">DRINK</button>
             <button id="play" onclick="play()">PLAY</button>
             <button id="rest" onclick="rest()">REST</button>
             <button id="reset" onclick="reset()">RESET</button>
         </div>
     </div>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

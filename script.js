@@ -1,3 +1,5 @@
+let animalName = ""
+
 class Pet {
     constructor(name, hunger, thirst, happiness){
         this._name = name;
@@ -45,13 +47,24 @@ class Pet {
         this.energy -=20;
     }
 }
-let start = () => {
 
+function start(){
+    let animalName = document.getElementById("input").value;
+    let classHide = document.querySelectorAll('.pet_img', '.pet_container', '.stats_container', `.button_container`);
+    // document.addEventListener("click", (i) =>{
+    //     console.log(i);
+    //     classHide.style.display = "";
+    
+let Animal = new Pet(animalName)
+console.log(Animal);
 }
-reset()
 
-const Animal = new Pet("Simba")
+function reset(){
+    document.location.reload(true)
+}
+
+const Animal = new Pet("TEST")
 
 console.log(Animal);
 
-setInterval(() => {this.ignored()}, 30000);
+//setInterval(() => {this.ignored()}, 30000);

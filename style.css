@@ -76,6 +76,6 @@ button {
     display: flex;
 }
 
-.pet_img, .pet_container, .stats_container, .button_container {
+/* .pet_img, .pet_container, .stats_container, .button_container {
     display: none;
-}
+} */
