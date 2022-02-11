@@ -55,16 +55,16 @@ function start(){
     //     console.log(i);
     //     classHide.style.display = "";
     
-let Animal = new Pet(animalName)
+    let Animal = new Pet(animalName)
 console.log(Animal);
-}
-
-function reset(){
-    document.location.reload(true)
 }
 
 const Animal = new Pet("TEST")
 
 console.log(Animal);
+
+function reset(){
+    document.location.reload(true)
+}
 
 //setInterval(() => {this.ignored()}, 30000);
