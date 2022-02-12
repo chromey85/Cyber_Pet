@@ -5,8 +5,13 @@ class Pet {
         this._thirst = 100;
         this._happiness = 100;
         this._energy = 100;
-    }
-
+        this.feed = this.feed.bind(this);
+        this.drink = this.drink.bind(this);
+        this.play = this.play.bind(this);
+        this.rest = this.rest.bind(this);
+        this.ignored = this.ignored.bind(this);
+     }
+//--------getters------------
     get name() {
         return this._name;
     }
@@ -22,70 +27,55 @@ class Pet {
     get energy() {
         return this._energy;
     }
+//--------setters------------
+    set hunger(val) {
+        this._hunger = val;
+        if (this._hunger < 0) this._hunger = 0;
+        if (this._hunger > 100) this._hunger = 100;
+      }
+    set thirst(val) {
+        this._thirst = val;
+        if (this._thirst < 0) this._thirst = 0;
+        if (this._thirst > 100) this._thirst = 100;
+    }
+    set happiness(val) {
+        this._happiness = val;
+        if (this._happiness < 0) this._happiness = 0;
+        if (this._happiness > 100) this._happiness = 100;
+    }
+    set energy(val) {
+        this._energy = val;
+        if (this._energy < 0) this._energy = 0;
+        if (this._energy > 100) this._energy = 100;
+    }
 
     feed(){
-        if (this._hunger >=20) {
-            this._hunger -=20
-        };
-        if (this._thirst >=10) {
-            this._hunger -=10
-        };
-        if (this._happiness >=10) {
-            this._happiness +=20
-        };
+        this._hunger +=20
+        this._thirst +=10
+        this._energy +=10
     }
     drink(){
-        if (this._thirst >=20) {
-            this._thirst -=20
-        };
-        if (this._hunger >=10) {
-            this._hunger -=10
-        };
-        if (this._happiness >=10) {
-            this._happiness +=20
-        };
+        this._thirst +=20
+        this._hunger +=10
+        this._happiness +=10
     }
     play(){
-        if (this._energy >=20) {
-            this._energy -=20
-        };
-        if (this._hunger >=40) {
-            this._hunger -=40
-        };
-        if (this._thirst >=10) {
-            this._thirst -=40
-        };
-        if (this._happiness >=10) {
-            this._happiness +=40
-        };
+        this._energy -=20
+        this._hunger -=40
+        this._thirst -=30
+        this._happiness +=40
     }
     rest(){
-        if (this.energy >=10) {
-            this.energy +=40
-        };
-        if (this.happiness >=10) {
-            this.happiness +=10
-        };
-        if (this.hunger >=10) {
-            this.hunger -=10
-        };
-        if (this._thirst >=10) {
-            this._thirst -=20
-        };
+        this.energy +=10
+        this.happiness -=10
+        this.hunger -=10
+        this._thirst -=10
     }
     ignored(){
-        if (this._hunger >=20) {
-            this._hunger -=20;
-        }
-        if (this._thirst >=20) {
-            this._thirst -=20
-        }
-        if (this._happiness >=20) {
-            this._happiness -=20
-        }
-        if (this._energy >=20) {
-            this._energy -=20
-        };
+        this._hunger -=20
+        this._thirst -=20
+        this._happiness -=20
+        this._energy -=20
     }
 }
 
@@ -119,24 +109,29 @@ function start(){
       animal = new Pet(animalName)
 }
 
-function feedAnimal() {
-    // Call the 'feed()' method of the animal instance
-    animal.feed()
-    // update the UI
-    updateStats()
-}
-function drinkAnimal() {
-    animal.drink()
-    updateStats()
-}
-function playAnimal() {
-    animal.play()
-    updateStats()
-}
-function restAnimal() {
-    animal.rest()
-    updateStats()
-}
+function methodWrapper(func) {
+    func();
+    updateStats();
+  }
+
+// function feedAnimal() {
+//     // Call the 'feed()' method of the animal instance
+//     animal.feed()
+//     // update the UI
+//     updateStats()
+// }
+// function drinkAnimal() {
+//     animal.drink()
+//     updateStats()
+// }
+// function playAnimal() {
+//     animal.play()
+//     updateStats()
+// }
+// function restAnimal() {
+//     animal.rest()
+//     updateStats()
+// }
 
 setInterval(() => {
     if (animal) {
@@ -145,7 +140,7 @@ setInterval(() => {
       // update the UI
       updateStats()
     }
-  }, 3000)
+  }, 30000)
 
 function reset(){
     document.location.reload(true)

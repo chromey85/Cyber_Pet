@@ -27,10 +27,10 @@
             <div class="stats" id="energy_bar">☐☐☐☐☐☐☐☐☐☐</div>
         </div>
         <div class="button_container">
-            <button id="feed" onclick="feedAnimal()">FEED</button>
-            <button id="drink" onclick="drinkAnimal()">DRINK</button>
-            <button id="play" onclick="playAnimal()">PLAY</button>
-            <button id="rest" onclick="restAnimal()">REST</button>
+            <button id="feed" onclick="methodWrapper(animal.feed)">FEED</button>
+            <button id="drink" onclick="methodWrapper(animal.drink)">DRINK</button>
+            <button id="play" onclick="methodWrapper(animal.play)">PLAY</button>
+            <button id="rest" onclick="methodWrapper(animal.rest)">REST</button>
             <button id="reset" onclick="reset()">RESET</button>
         </div>
     </div>
