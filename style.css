@@ -2,22 +2,29 @@
 
 .title {
     display: flex;
-    border: black solid 5px;
+    /* border: black solid 5px; */
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    font-family: fantasy;
+    font-size: 86px;
+}
+.main_img {
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
 .pet_img {
     display: flex;
-    border: red solid 5px;
+    /* border: red solid 5px; */
     align-items: center;
     justify-content: center;
 }
 
 .pet_container {
     display: flex;
-    border: purple solid 5px;
+    /* border: purple solid 5px; */
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -25,7 +32,7 @@
 
 .pet_box {
     display: flex;
-    border: green solid 5px;
+    /* border: green solid 5px; */
     flex-direction: row;
     align-content: center;
     align-items: center;
@@ -34,30 +41,30 @@
 
 .pet_name {
     display: flex;
-    border: orange solid 5px;
+    /* border: orange solid 5px; */
 }
 
 input {
     display: flex;
-    border: yellow solid 5px;
+    /* border: yellow solid 5px; */
 }
 
 .stats_container {
     display: flex;
-    width: 100%;
+    width: 28%;
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    border: dimgray solid 5px; 
+    /* border: dimgray solid 5px;  */
 }
 
 .stats {
     display: flex;
     width: 50%;
     height: 100%;
-    border: turquoise solid 5px;
+    /* border: turquoise solid 5px; */
     justify-content: flex-start;
-    border: turquoise solid 5px;
+    /* border: turquoise solid 5px; */
 }
 
 #stats_title {
@@ -69,7 +76,7 @@ input {
 
 .button_container {
     display: flex;
-    border: blue solid 5px;
+    /* border: blue solid 5px; */
 }
 
 button {

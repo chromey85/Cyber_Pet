@@ -84,6 +84,9 @@ const hunger_bar = document.getElementById('hunger_bar')
 const thirst_bar = document.getElementById('thirst_bar')
 const hap_bar = document.getElementById('hap_bar')
 const energy_bar = document.getElementById('energy_bar')
+const pet_img = document.querySelector('.pet_img')
+const pet_box = document.querySelector('.pet_box')
+const startBut = document.querySelector('.start')
 
 let animalName
 let animal
@@ -107,6 +110,7 @@ function start(){
       animalName = input.value
       console.log('animalName = ', animalName)
       animal = new Pet(animalName)
+      pet_box.style.display = "none"
       
 }
 
