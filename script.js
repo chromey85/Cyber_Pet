@@ -107,6 +107,7 @@ function start(){
       animalName = input.value
       console.log('animalName = ', animalName)
       animal = new Pet(animalName)
+      
 }
 
 function methodWrapper(func) {
